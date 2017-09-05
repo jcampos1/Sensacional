@@ -1,11 +1,13 @@
 'use strict';
 angular.module("myservices", []);
 
-angular.module("myservices").factory('grid', function($log, $rootScope) {
+angular.module("myservices").service('myser', function($log, $rootScope) {
     return {
         //Configuraciòn de la grilla
-        columnDefinition: function( ) {
-            $rootScope.gridOptions = {
+        columnDefinition: function( $scope ) {
+            $scope.gridOptions = {
+                paginationPageSizes: [25, 50, 75],
+                paginationPageSize: 25,
                 enableSorting: true,
                 enableFiltering: true,
                 columnDefs: [
@@ -14,13 +16,19 @@ angular.module("myservices").factory('grid', function($log, $rootScope) {
                   { field: 'name', enableSorting: false },
                   { field: 'condition', enableSorting: false },
                   { field: 'priceref' },
-                  { field: 'priceventa' },
+                  { field: 'price' },
                   { field: 'qty' }
                 ],
                 onRegisterApi: function( gridApi ) {
-                    $rootScope.grid1Api = gridApi;
+                    $scope.grid1Api = gridApi;
                 }
             };
+        },
+
+        num: function( number ) {
+            var prStr = number + "";
+            prStr = prStr.replace('.', '');
+            return parseFloat(prStr);
         }
     }
 });

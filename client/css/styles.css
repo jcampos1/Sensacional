@@ -6,7 +6,6 @@ body {
 }
 
 aside.left {
-    border: 1px solid red;
     width: 30%;
     position: absolute;
     top: 70px;
@@ -14,7 +13,6 @@ aside.left {
 }
 
 div.container01 {
-  border: 1px solid blue;
   width: 68%;
   height: auto;
   position: absolute;

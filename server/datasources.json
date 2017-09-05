@@ -2,5 +2,15 @@
   "db": {
     "name": "db",
     "connector": "memory"
+  },
+  "postgresql": {
+    "host": "localhost",
+    "port": 5432,
+    "url": "postgres://postgres:toor@localhost/sensacional",
+    "database": "sensacional",
+    "password": "toor",
+    "name": "postgresql",
+    "user": "postgres",
+    "connector": "postgresql"
   }
 }

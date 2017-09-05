@@ -4,7 +4,7 @@
         <!-- Checkbox Sección -->
         <div class="checkbox">
             <label>
-                <input type="checkbox" value="" name="section" ng-model="section">
+                <input type="checkbox" value="" name="section" ng-model="categories">
                 Sección
             </label>
         </div>
@@ -40,16 +40,16 @@
     </form>
 </aside>
 
-<!-- Sección de visualización de gráfica y tabla -->
-<div class="container01">grafica y tabla
-    <ul>
-        <li ng-repeat="product in products">
-                {{product.name }}
-        </li>
-    </ul>
-    <canvas id="bar" class="chart chart-bar"
-    chart-data="data" chart-labels="labels" chart-series="series" chart-colors="color" chart-click="showGrid">
-</canvas>
+<!-- Componente para mostrar grilla de una barra-->
+<detail-product-component/>
 
-    <div id="grid2" ui-grid="gridOptions" class="grid"></div>
+<div class="container01">
+
+    <!-- Gráfico -->
+    <canvas id="bar" class="chart chart-bar" chart-legend="true"
+        chart-data="data" chart-labels="labels" chart-series="series" chart-colors="color" chart-click="showGrid">
+    </canvas>
+
+    <!-- Grilla -->
+    <div id="grid2" ui-grid="gridOptions" ui-grid-pagination class="grid"></div>
 </div>

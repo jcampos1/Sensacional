@@ -14,15 +14,21 @@
       "type": "string",
       "required": true
     },
-    "priceventa": {
+    "price": {
       "type": "number",
-      "required": true
+      "required": true,
+      "postgresql": {
+        "dataType": "decimal"
+      }
     },
     "priceref": {
       "type": "number",
-      "required": true
+      "required": true,
+      "postgresql": {
+        "dataType": "decimal"
+      }
     },
-    "datepu": {
+    "createat": {
       "type": "date",
       "required": true
     },

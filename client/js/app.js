@@ -6,7 +6,7 @@
 angular
   .module('app', [
     'lbServices',
-    'ui.router', 'ui.grid', 'myservices', 'chart.js'
+    'ui.router', 'ui.grid', 'ui.grid.pagination', 'myservices', 'chart.js', 'ui.bootstrap',
   ])
   .config(['$stateProvider', '$urlRouterProvider', 'ChartJsProvider', function($stateProvider,
       $urlRouterProvider, ChartJsProvider) {
