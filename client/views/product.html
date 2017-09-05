@@ -1,0 +1,55 @@
+<!-- Filtro para los precios -->
+<aside class="left">
+    <form name="formFilter" novalidate>
+        <!-- Checkbox Sección -->
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="" name="section" ng-model="section">
+                Sección
+            </label>
+        </div>
+        <!-- Checkbox Nombre -->
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="" name="name" ng-model="name">
+                Nombre
+            </label>
+        </div>
+        <!-- Checkbox Marca -->
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="" name="mark" ng-model="mark">
+                Marca
+            </label>
+        </div>
+        <!-- Checkbox Condición -->
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="" name="condition" ng-model="condition">
+                Condición
+            </label>
+        </div>
+        <div class="col-sm-12">
+            <div class="input-group">
+                <input type="text" ng-model="search" class="form-control" placeholder="Texto de búsqueda..." aria-label="Texto de búsqueda...">
+                <span class="input-group-btn">
+                <button class="btn btn-secondary" type="button" ng-click="getProductsByFilter()">Buscar!</button>
+                </span>
+            </div>
+        </div>
+    </form>
+</aside>
+
+<!-- Sección de visualización de gráfica y tabla -->
+<div class="container01">grafica y tabla
+    <ul>
+        <li ng-repeat="product in products">
+                {{product.name }}
+        </li>
+    </ul>
+    <canvas id="bar" class="chart chart-bar"
+    chart-data="data" chart-labels="labels" chart-series="series" chart-colors="color" chart-click="showGrid">
+</canvas>
+
+    <div id="grid2" ui-grid="gridOptions" class="grid"></div>
+</div>

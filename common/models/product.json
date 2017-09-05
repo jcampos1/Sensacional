@@ -1,0 +1,55 @@
+{
+  "name": "product",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "sku": {
+      "type": "number",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "priceventa": {
+      "type": "number",
+      "required": true
+    },
+    "priceref": {
+      "type": "number",
+      "required": true
+    },
+    "datepu": {
+      "type": "date",
+      "required": true
+    },
+    "imagen": {
+      "type": "string",
+      "required": true
+    },
+    "condition": {
+      "type": "string",
+      "required": true
+    },
+    "categories": {
+      "type": "string",
+      "required": true
+    },
+    "qty": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "mark": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

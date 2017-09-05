@@ -4,3 +4,20 @@ body {
 .glyphicon-remove:hover {
   cursor:pointer
 }
+
+aside.left {
+    border: 1px solid red;
+    width: 30%;
+    position: absolute;
+    top: 70px;
+    left: 1%;
+}
+
+div.container01 {
+  border: 1px solid blue;
+  width: 68%;
+  height: auto;
+  position: absolute;
+  top: 70px;
+  left: 31%;
+}

@@ -6,16 +6,18 @@
 angular
   .module('app', [
     'lbServices',
-    'ui.router'
+    'ui.router', 'ui.grid', 'myservices', 'chart.js'
   ])
-  .config(['$stateProvider', '$urlRouterProvider', function($stateProvider,
-      $urlRouterProvider) {
+  .config(['$stateProvider', '$urlRouterProvider', 'ChartJsProvider', function($stateProvider,
+      $urlRouterProvider, ChartJsProvider) {
     $stateProvider
-      .state('todo', {
+      .state('product', {
         url: '',
-        templateUrl: 'views/todo.html',
-        controller: 'TodoController'
+        templateUrl: 'views/product.html',
+        controller: 'ProductController'
       });
 
-    $urlRouterProvider.otherwise('todo');
+      ChartJsProvider.setOptions({ colors : [ '#DCDCDC', '#46BFBD', '#803690', '#00ADF9', '#FDB45C', '#949FB1', '#4D5360'] });
+
+    $urlRouterProvider.otherwise('product');
   }]);
